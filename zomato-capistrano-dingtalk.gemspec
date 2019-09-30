@@ -5,10 +5,10 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'capistrano/dingtalk/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "capistrano-dingtalk"
+  spec.name          = "zomato-capistrano-dingtalk"
   spec.version       = Capistrano::Dingtalk::VERSION
-  spec.authors       = ["atpking"]
-  spec.email         = ["atpking@gmail.com"]
+  spec.authors       = ["atpking", "sebin"]
+  spec.email         = ["atpking@gmail.com", "sebin.thomas@zomato.com"]
 
   spec.summary       = "ding talk capistrano plugin"
   spec.description   = "ding talk capistrano plugin, sending message to ding talk custom webhook rebot"
