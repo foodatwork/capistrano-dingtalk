@@ -1,4 +1,4 @@
-# Capistrano::Dingtalk
+# ZomatoCapistrano::Dingtalk
 
 send msg to ding talk webhook rebot when capistrano works.
 
@@ -13,13 +13,13 @@ send msg to ding talk webhook rebot when capistrano works.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'capistrano-dingtalk', require: false
+gem 'zomato-capistrano-dingtalk', git: 'https://github.com/foodatwork/zomato-capistrano-dingtalk.git', require: false
 ```
 
 Require the library in your application's Capfile:
 
  ```ruby
- require 'capistrano/dingtalk'
+ require 'zomato_capistrano/dingtalk'
  ```
 
 ## Configuration

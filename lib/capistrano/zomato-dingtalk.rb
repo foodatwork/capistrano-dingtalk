@@ -1,11 +1,11 @@
 require 'rest-client'
-require_relative "dingtalk/version"
-require_relative "dingtalk/messaging/base"
-require_relative "dingtalk/messaging/text"
-require_relative "dingtalk/messaging/markdown"
+require_relative "zomato-dingtalk/version"
+require_relative "zomato-dingtalk/messaging/base"
+require_relative "zomato-dingtalk/messaging/text"
+require_relative "zomato-dingtalk/messaging/markdown"
 require 'forwardable'
 
-load File.expand_path("../tasks/dingtalk.rake", __FILE__)
+load File.expand_path("../tasks/zomato_dingtalk.rake", __FILE__)
 
 module Capistrano
   class ZomatoDingtalk

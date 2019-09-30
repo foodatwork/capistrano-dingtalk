@@ -13,7 +13,7 @@
 在 Gemfile 中添加
 
 ```ruby
-gem 'capistrano-dingtalk', require: false
+gem 'zomato-capistrano-dingtalk', git: 'https://github.com/foodatwork/zomato-capistrano-dingtalk.git', require: false
 ```
 
 在Capfile 中添加
