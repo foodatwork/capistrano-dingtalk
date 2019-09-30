@@ -1,4 +1,4 @@
-namespace :dingtalk do
+namespace :zomato_dingtalk do
   namespace :deploy do
     desc 'Notify about updating deploy'
     task :updating do
@@ -32,8 +32,8 @@ namespace :dingtalk do
   end
 end
 
-before 'deploy:updating',           'dingtalk:deploy:updating'
-before 'deploy:reverting',          'dingtalk:deploy:reverting'
-after  'deploy:finishing',          'dingtalk:deploy:updated'
-after  'deploy:finishing_rollback', 'dingtalk:deploy:reverted'
-after  'deploy:failed',             'dingtalk:deploy:failed'
+before 'deploy:updating',           'zomato_dingtalk:deploy:updating'
+before 'deploy:reverting',          'zomato_dingtalk:deploy:reverting'
+after  'deploy:finishing',          'zomato_dingtalk:deploy:updated'
+after  'deploy:finishing_rollback', 'zomato_dingtalk:deploy:reverted'
+after  'deploy:failed',             'zomato_dingtalk:deploy:failed'
