@@ -6,7 +6,7 @@ require 'capistrano/dingtalk/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "zomato-capistrano-dingtalk"
-  spec.version       = Capistrano::Dingtalk::VERSION
+  spec.version       = Capistrano::ZomatoDingtalk::VERSION
   spec.authors       = ["atpking", "sebin"]
   spec.email         = ["atpking@gmail.com", "sebin.thomas@zomato.com"]
 
