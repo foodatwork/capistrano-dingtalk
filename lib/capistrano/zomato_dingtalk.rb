@@ -8,14 +8,14 @@ require 'forwardable'
 load File.expand_path("../tasks/dingtalk.rake", __FILE__)
 
 module Capistrano
-  class Dingtalk
+  class ZomatoDingtalk
     extend Forwardable
     def_delegators :env, :fetch, :run_locally
 
     attr_reader :message
     def initialize(env)
       @env = env
-      @config = fetch(:dingtalk_info, {})
+      @config = fetch(:zomato_dingtalk_info, {})
       # TODO: supports more message categories
       klass = message_klass
       @message = klass.new @config
@@ -40,9 +40,9 @@ module Capistrano
       klass = Object
       case category
       when 'text'
-        klass = ::Capistrano::Dingtalk::Messaging::Text
+        klass = ::Capistrano::ZomatoDingtalk::Messaging::Text
       when 'markdown'
-        klass = ::Capistrano::Dingtalk::Messaging::Markdown
+        klass = ::Capistrano::ZomatoDingtalk::Messaging::Markdown
       end
       klass
     end

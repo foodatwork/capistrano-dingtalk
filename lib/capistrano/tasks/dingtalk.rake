@@ -2,27 +2,27 @@ namespace :dingtalk do
   namespace :deploy do
     desc 'Notify about updating deploy'
     task :updating do
-      Capistrano::Dingtalk.new(self).run(:updating)
+      Capistrano::ZDingtalk.new(self).run(:updating)
     end
 
     desc 'Notify about reverting deploy'
     task :reverting do
-      Capistrano::Dingtalk.new(self).run(:reverting)
+      Capistrano::ZDingtalk.new(self).run(:reverting)
     end
 
     desc 'Notify about updated deploy'
     task :updated do
-      Capistrano::Dingtalk.new(self).run(:updated)
+      Capistrano::ZDingtalk.new(self).run(:updated)
     end
 
     desc 'Notify about reverted deploy'
     task :reverted do
-      Capistrano::Dingtalk.new(self).run(:reverted)
+      Capistrano::ZDingtalk.new(self).run(:reverted)
     end
 
     desc 'Notify about failed deploy'
     task :failed do
-      Capistrano::Dingtalk.new(self).run(:failed)
+      Capistrano::ZDingtalk.new(self).run(:failed)
     end
 
     desc 'Test dingtalk integration'

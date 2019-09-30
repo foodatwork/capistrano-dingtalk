@@ -1,6 +1,6 @@
 require_relative 'base'
 
-module Capistrano::Dingtalk::Messaging
+module Capistrano::ZomatoDingtalk::Messaging
   class Markdown < Base
     def initialize(info)
       @info = info || {}

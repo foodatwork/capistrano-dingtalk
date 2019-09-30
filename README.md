@@ -28,7 +28,7 @@ Require the library in your application's Capfile:
 2. add config to `config/deploy.rb` or the stages files.
 
 ```ruby
-set :dingtalk_info, {
+set :zomato_dingtalk_info, {
   category: "text",  # option, selection:  text, markdown, default is text
   url: 'https://oapi.dingtalk.com/robot/send?access_token=abcedf012345678', # change to your url
   at_mobiles: [], # option

@@ -28,7 +28,7 @@ gem 'capistrano-dingtalk', require: false
 2. 向 `config/deploy.rb` 或者具体的环境文件里加以下配置
 
 ```ruby
-set :dingtalk_info, {
+set :zomato_dingtalk_info, {
   category: "text",  # 可选， 有 text  markdown 两种模式   ps 钉钉的markdown 好像只对手机端有效（2017年05月05日）
   url: 'https://oapi.dingtalk.com/robot/send?access_token=abcedf012345678', # 换成你的webhook 地址
   at_mobiles: [], # 可选，填 你要 at 的人的手机号

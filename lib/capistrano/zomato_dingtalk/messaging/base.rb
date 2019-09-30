@@ -2,7 +2,7 @@ require 'forwardable'
 require 'json'
 require_relative 'helpers'
 
-module Capistrano::Dingtalk::Messaging
+module Capistrano::ZomatoDingtalk::Messaging
   class Base
     include Helpers
     extend Forwardable
@@ -13,23 +13,23 @@ module Capistrano::Dingtalk::Messaging
     end
 
     def message_for_updating
-      "#{deployer} has started deploying branch #{branch} of #{application} to #{stage}"
+      "food@work:#{stage} Deployment started for branch #{branch} of #{application}"
     end
 
     def message_for_reverting
-      "#{deployer} has started rolling back branch #{branch} of #{application} to #{stage}"
+      "food@work:#{stage} Rollback started for branch #{branch} of #{application}"
     end
 
     def message_for_updated
-      "#{deployer} has finished deploying branch #{branch} of #{application} to #{stage}"
+      "food@work:#{stage} Deployment finished for branch #{branch} of #{application}"
     end
 
     def message_for_reverted
-      "#{deployer} has finished rolling back branch of #{application} to #{stage}"
+      "food@work:#{stage} Rollback finished for branch  #{branch} of #{application}"
     end
 
     def message_for_failed
-      "#{deployer} has failed to #{deploying? ? 'deploy' : 'rollback'} branch #{branch} of #{application} to #{stage}"
+      "food@work:#{stage} #{deploying? ? 'Deployment' : 'Rollback'} failed for branch #{branch} of #{application}"
     end
 
     ################################################################################

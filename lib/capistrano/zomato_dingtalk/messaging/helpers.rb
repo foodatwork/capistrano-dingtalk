@@ -1,4 +1,4 @@
-module Capistrano::Dingtalk::Messaging
+module Capistrano::ZomatoDingtalk::Messaging
   module Helpers
     def username
       'cap-dingtalk-bot'
