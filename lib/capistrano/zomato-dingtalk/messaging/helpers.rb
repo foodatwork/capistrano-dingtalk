@@ -16,6 +16,10 @@ module Capistrano::ZomatoDingtalk::Messaging
       fetch(:application)
     end
 
+    def rails_env
+      fetch(:rails_env)
+    end
+
     def stage(default = 'an unknown stage')
       fetch(:stage, default)
     end
