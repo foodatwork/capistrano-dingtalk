@@ -13,23 +13,23 @@ module Capistrano::ZomatoDingtalk::Messaging
     end
 
     def message_for_updating
-      "food@work:#{stage}:#{rails_env} Deployment started for branch #{branch} of #{application}"
+      "food@work:#{stage}:#{rails_env} Deployment started for branch #{branch} at #{current_revision} of #{application}"
     end
 
     def message_for_reverting
-      "food@work:#{stage}:#{rails_env} Rollback started for branch #{branch} of #{application}"
+      "food@work:#{stage}:#{rails_env} Rollback started for branch #{branch} at #{current_revision} of #{application}"
     end
 
     def message_for_updated
-      "food@work:#{stage}:#{rails_env} Deployment finished for branch #{branch} of #{application}"
+      "food@work:#{stage}:#{rails_env} Deployment finished for branch #{branch} at #{current_revision} of #{application}"
     end
 
     def message_for_reverted
-      "food@work:#{stage}:#{rails_env} Rollback finished for branch  #{branch} of #{application}"
+      "food@work:#{stage}:#{rails_env} Rollback finished for branch  #{branch} at #{current_revision} of #{application}"
     end
 
     def message_for_failed
-      "food@work:#{stage}:#{rails_env} #{deploying? ? 'Deployment' : 'Rollback'} failed for branch #{branch} of #{application}"
+      "food@work:#{stage}:#{rails_env} #{deploying? ? 'Deployment' : 'Rollback'} failed for branch #{branch} at #{current_revision} of #{application}"
     end
 
     ################################################################################

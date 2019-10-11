@@ -24,6 +24,10 @@ module Capistrano::ZomatoDingtalk::Messaging
       fetch(:stage, default)
     end
 
+    def current_revision
+      fetch(:current_revision)
+    end
+
     #
     # Return the elapsed running time as a string.
     #
