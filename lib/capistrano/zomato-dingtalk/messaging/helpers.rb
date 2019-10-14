@@ -30,7 +30,7 @@ module Capistrano::ZomatoDingtalk::Messaging
 
     def release_path
       repo_link = "https://#{fetch(:repo_url).split('@').last.gsub(':', '/').split('.git').first}"
-      if branch.first == 'v'
+      if branch[0] == 'v'
         "#{repo_link}/releases/tag/#{branch}"
       else
         "#{repo_link}/tree/#{current_revision}"
