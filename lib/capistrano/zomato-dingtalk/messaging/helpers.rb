@@ -28,6 +28,10 @@ module Capistrano::ZomatoDingtalk::Messaging
       fetch(:current_revision)
     end
 
+    def release_path
+      "https://#{fetch(:repo_url).split('@').last.gsub(':', '/').split('.git').first}/releases/tag/#{branch}"
+    end
+
     #
     # Return the elapsed running time as a string.
     #
