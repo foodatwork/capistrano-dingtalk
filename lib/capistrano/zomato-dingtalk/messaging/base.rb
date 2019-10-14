@@ -25,7 +25,7 @@ module Capistrano::ZomatoDingtalk::Messaging
     end
 
     def message_for_reverted
-      "food@work:#{stage}:#{rails_env} Rollback finished for release  #{branch} at #{release_path} of #{application}"
+      "food@work:#{stage}:#{rails_env} Rollback finished for release #{branch} at #{release_path} of #{application}"
     end
 
     def message_for_failed
