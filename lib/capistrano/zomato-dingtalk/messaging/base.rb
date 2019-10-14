@@ -13,7 +13,7 @@ module Capistrano::ZomatoDingtalk::Messaging
     end
 
     def message_for_updating
-      "food@work:#{stage}:#{rails_env} Deployment started for release #{branch} at #{release_path} of #{application}"
+      "food@work:#{stage}:#{rails_env} Deployment started for release #{branch} of #{application}"
     end
 
     def message_for_reverting
