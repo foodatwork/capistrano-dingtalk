@@ -6,13 +6,11 @@ module Capistrano::ZomatoDingtalk::Messaging
       @info = info || {}
     end
 
-    def markdown_load(action)
+    def markdown_load(_action)
       "
-      ### #{application}
-      action: #{action}
-      deployer: `#{deployer}`
-      branch: `#{branch}`
-      stage: `#{stage}`"
+      ### [#{release_details[:name]}](#{release_path})
+      #{release_details[:notes]}
+      "
     end
 
     ################################################################################

@@ -37,6 +37,23 @@ module Capistrano::ZomatoDingtalk::Messaging
       end
     end
 
+    def release_details
+      api_base_url = 'https://api.github.com/repos'
+      repo_path = fetch(:repo_url).split(':').second.split('.git').first
+      api_url =
+        if branch[0] == 'v'
+          "#{api_base_url}/#{repo_path}/releases/tags/#{branch}?oauth_token=#{fetch(:zomato_ding_github_token)}"
+        else
+          "#{api_base_url}/#{repo_path}/releases/latest?oauth_token=#{fetch(:zomato_ding_github_token)}"
+        end
+      release_response = RestClient.get(api_url)
+      release_response_hash = JSON.parse(release_response)
+      {
+        name: release_response_hash['name'],
+        notes: release_response_hash['body']
+      }
+    end
+
     #
     # Return the elapsed running time as a string.
     #
