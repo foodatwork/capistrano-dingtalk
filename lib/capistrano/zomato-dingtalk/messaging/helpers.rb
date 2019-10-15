@@ -39,7 +39,7 @@ module Capistrano::ZomatoDingtalk::Messaging
 
     def release_details
       api_base_url = 'https://api.github.com/repos'
-      repo_path = fetch(:repo_url).split(':').second.split('.git').first
+      repo_path = fetch(:repo_url).split(':')[1].split('.git')[0]
       api_url =
         if branch[0] == 'v'
           "#{api_base_url}/#{repo_path}/releases/tags/#{branch}?oauth_token=#{fetch(:zomato_ding_github_token)}"
