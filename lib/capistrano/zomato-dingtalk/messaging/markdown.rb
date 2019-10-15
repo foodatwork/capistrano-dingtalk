@@ -7,10 +7,7 @@ module Capistrano::ZomatoDingtalk::Messaging
     end
 
     def markdown_load(_action)
-      "
-      ### [#{release_details[:name]}](#{release_path})
-      #{release_details[:notes]}
-      "
+      "# food@work:#{application} [#{branch}](#{release_path})\r\n\r\n**#{release_details[:name]}**\n\n###{release_details[:notes]}"
     end
 
     ################################################################################
@@ -22,9 +19,9 @@ module Capistrano::ZomatoDingtalk::Messaging
 
     def build_hash(action)
       {
-        msgtype: "markdown",
+        msgtype: 'markdown',
         markdown: {
-          title: message_for(action),
+          title: release_details[:name],
           text: markdown_load(action)
         }
       }

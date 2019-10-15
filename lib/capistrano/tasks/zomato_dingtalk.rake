@@ -32,7 +32,7 @@ namespace :zomato_dingtalk do
   end
 end
 
-before 'deploy:updating',           'zomato_dingtalk:deploy:updating'
+# before 'deploy:updating',           'zomato_dingtalk:deploy:updating'
 before 'deploy:reverting',          'zomato_dingtalk:deploy:reverting'
 after  'deploy:finishing',          'zomato_dingtalk:deploy:updated'
 after  'deploy:finishing_rollback', 'zomato_dingtalk:deploy:reverted'
